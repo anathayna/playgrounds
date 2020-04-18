@@ -35,7 +35,6 @@ func locateFox() {
         if let n2 = outerArray[outerIndex].firstIndex(where: {$0 ==  "🦊"}) {
             innerIndex = n2
         }
-        //        print("\(outerIndex)\(innerIndex)")
     }
 }
 
