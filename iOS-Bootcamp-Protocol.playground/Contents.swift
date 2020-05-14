@@ -6,6 +6,10 @@ protocol CanFly {
 
 class Bird {
     
+//    func fly() {
+//        print("The birds takes off into the air.")
+//    }
+    
     var isFemale = true
     
     func layEgg() {
