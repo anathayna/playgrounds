@@ -1,4 +1,7 @@
-import UIKit
+import Foundation
 
-let pizzaInInches: Int = 10
-var numberOfSlices: Int = 6
+let pizzaInInches: Int = 12
+var numberOfSlices: Int {
+    get { return pizzaInInches - 4 }
+}
+print(numberOfSlices)
