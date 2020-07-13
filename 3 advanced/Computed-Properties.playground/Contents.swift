@@ -1,13 +1,12 @@
 import Foundation
 
 var pizzaInInches: Int = 12 {
-    willSet {
-        print(pizzaInInches)
-        print(newValue)
-    }
+    willSet { }
     didSet {
-        print(oldValue)
-        print(pizzaInInches)
+        if pizzaInInches >= 18 {
+            print("invalid size specified, pizzaInInches set to 18")
+            pizzaInInches = 18
+        }
     }
 }
 var numberOfPeople: Int = 6
