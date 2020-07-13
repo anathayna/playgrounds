@@ -1,6 +1,15 @@
 import Foundation
 
-let pizzaInInches: Int = 12
+var pizzaInInches: Int = 12 {
+    willSet {
+        print(pizzaInInches)
+        print(newValue)
+    }
+    didSet {
+        print(oldValue)
+        print(pizzaInInches)
+    }
+}
 var numberOfPeople: Int = 6
 let slicesPerPerson: Int = 3
 
@@ -19,5 +28,3 @@ var numberOfPizza: Int {
     }
 }
 
-numberOfPizza = 4
-print(numberOfPeople)
