@@ -1,2 +1,2 @@
 # swift-playgrounds
-programming practicee :speech_balloon:
+programming practice :speech_balloon:
