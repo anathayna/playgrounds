@@ -1,2 +1,2 @@
 # swift-playgrounds
-programming practice :speech_balloon:
+swift programming practice 🐣
