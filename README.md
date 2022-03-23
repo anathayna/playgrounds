@@ -1,2 +1,2 @@
-# swift-playgrounds
+# swift playgrounds
 swift programming practice 🐣
