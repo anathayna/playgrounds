@@ -1,8 +1,6 @@
 print("Hello, world!")
 
-/*
- swift book: simple values
- */
+// constants & variables
 
 var myVariable = 42
 myVariable = 50
@@ -32,14 +30,3 @@ let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 let name = "Anne"
 let calculation = "calculation result: \(9.9/3.3)"
 let greeting = "Hello! I'm \(name)"
-
-
-/*
- iOS bootcamp
- */
-
-import Foundation
-
-let secondsInAnHour = 3600
-
-print(secondsInAnHour)
