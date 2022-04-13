@@ -80,9 +80,19 @@ repeat {
 print(m)
 
 // extra: range of indexes
+/*
+ ..< : omits its upper value
+ ... : includes both values
+ */
 
-var total = 0
-for i in 0..<4 {
-    total += i
+var total1 = 0
+for i in 0..<4 { // omits 4
+    total1 += i
 }
-print(total)
+print(total1)
+
+var total2 = 0
+for i in 0...4 { // includes 4
+    print(i)
+}
+print(total2)
