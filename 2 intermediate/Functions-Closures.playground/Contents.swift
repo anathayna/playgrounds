@@ -1,6 +1,16 @@
 import Foundation
 
-func greet(person: String, day: String) -> String {
+func greet1(person: String, day: String) -> String {
     return "Hello \(person), today is \(day)."
 }
-greet(person: "Bob", day: "Tuesday")
+greet1(person: "Bob", day: "Tuesday")
+
+func greet2(person: String, lunch: String) -> String {
+    return "Hello \(person), today’s lunch special is \(lunch)."
+}
+greet2(person: "Bob", lunch: "japanese food")
+
+func greet3(_ person: String, on day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+greet3("John", on: "Wednesday")
