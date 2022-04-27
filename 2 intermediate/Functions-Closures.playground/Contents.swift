@@ -80,3 +80,18 @@ func lessThanTen(number: Int) -> Bool {
 }
 var numbers = [20, 19, 7, 12]
 hasAnyMatches(list: numbers, condition: lessThanTen)
+
+// closure
+
+numbers.map({ (number: Int) -> Int in
+    let result = 3 * number
+    return result
+})
+
+numbers.map({ (number: Int) -> Int in
+    if number % 2 == 1 {
+        return 0 // return zero for all odd numbers
+    }
+    let result = 3 * number
+    return result
+})
