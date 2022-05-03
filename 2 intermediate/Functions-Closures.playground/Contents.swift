@@ -95,3 +95,11 @@ numbers.map({ (number: Int) -> Int in
     let result = 3 * number
     return result
 })
+
+// implicitly closures
+
+let mappedNumbers = numbers.map({ number in 3 * number })
+print(mappedNumbers)
+
+let sortedNumbers = numbers.sorted { $0 > $1 }
+print(sortedNumbers)
