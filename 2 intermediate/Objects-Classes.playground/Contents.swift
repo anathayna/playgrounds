@@ -1,5 +1,7 @@
 import Foundation
 
+// class
+
 class Shape {
     var numberOfSides1 = 0
     let numberOfSides2 = 0
@@ -12,3 +14,9 @@ class Shape {
         return "A shape with \(numberOfSides2) sides."
     }
 }
+
+// instance
+
+var shape = Shape()
+shape.numberOfSides1 = 7
+var shapeDescription = shape.simpleDescription1()
