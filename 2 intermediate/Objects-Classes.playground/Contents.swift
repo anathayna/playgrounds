@@ -15,8 +15,25 @@ class Shape {
     }
 }
 
-// instance
-
-var shape = Shape()
+var shape = Shape() // instance
 shape.numberOfSides1 = 7
 var shapeDescription = shape.simpleDescription1()
+
+// init
+
+class NamedShape {
+    var numberOfSides: Int = 0
+    var name: String
+
+    init(name: String) {
+        self.name = name
+    }
+
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides."
+    }
+}
+
+var namedShape = NamedShape(name: "etc")
+namedShape.numberOfSides = 7
+var shapeDescription2 = namedShape.simpleDescription()
