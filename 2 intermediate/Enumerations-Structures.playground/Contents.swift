@@ -8,7 +8,7 @@ enum Rank: Int {
     func simpleDescription() -> String {
         switch self {
         case .ace:
-            return "ace"
+            return "ace" // explicitly given a raw value = 1
         case .jack:
             return "jack"
         case .queen:
@@ -38,3 +38,35 @@ comparesRank(a: jack, b: ace)
 if let convertedRank = Rank(rawValue: 3) {
     let threeDescription = convertedRank.simpleDescription()
 }
+
+// case values of an enumeration are actual values
+
+enum Suit {
+    case spades, hearts, diamonds, clubs
+
+    func simpleDescription() -> String {
+        switch self {
+        case .spades:
+            return "spades"
+        case .hearts:
+            return "hearts"
+        case .diamonds:
+            return "diamonds"
+        case .clubs:
+            return "clubs"
+        }
+    }
+    
+    func color() -> String {
+        switch self {
+        case .spades, .clubs:
+            return "black"
+        case .hearts, .diamonds:
+            return "red"
+        }
+    }
+}
+
+let hearts = Suit.hearts
+let heartsDescription = hearts.simpleDescription()
+let heartsColor = hearts.color()
