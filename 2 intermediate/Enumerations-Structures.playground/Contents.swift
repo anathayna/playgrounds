@@ -71,7 +71,7 @@ let hearts = Suit.hearts
 let heartsDescription = hearts.simpleDescription()
 let heartsColor = hearts.color()
 
-// values as part of the declaration
+// values associated with the case (values as part of the declaration)
 
 enum ServerResponse {
     case result(String, String, String)
