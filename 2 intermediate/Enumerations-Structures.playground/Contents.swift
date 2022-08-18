@@ -70,3 +70,24 @@ enum Suit {
 let hearts = Suit.hearts
 let heartsDescription = hearts.simpleDescription()
 let heartsColor = hearts.color()
+
+// values as part of the declaration
+
+enum ServerResponse {
+    case result(String, String, String)
+    case failure(String)
+    case noContent(String)
+}
+
+let success = ServerResponse.result("6:00 am", "6:30 pm", "12:00 pm")
+let failure = ServerResponse.failure("Out of cheese.")
+let noContent = ServerResponse.noContent("¯\\_(ツ)_//¯")
+
+switch success {
+case let .result(sunrise, sunset, daylight): // has the same raw value
+    print("Sunrise is at \(sunrise), sunset is at \(sunset), and total daylight is \(daylight).")
+case let .failure(message):
+    print("Failure...  \(message)")
+case let .noContent(message):
+    print("No content... \(message)")
+}
