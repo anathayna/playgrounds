@@ -91,3 +91,31 @@ case let .failure(message):
 case let .noContent(message):
     print("No content... \(message)")
 }
+
+// struct
+
+struct Card {
+    var rank: Rank
+    var suit: Suit
+    
+    func simpleDescription() -> String {
+        return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
+    }
+    
+    func deck() -> [Card] {
+        let ranks = [Rank.ace, Rank.two, Rank.three, Rank.four, Rank.five, Rank.six, Rank.seven, Rank.eight, Rank.nine, Rank.ten, Rank.jack, Rank.queen, Rank.king]
+        let suits = [Suit.spades, Suit.hearts, Suit.diamonds, Suit.clubs]
+        var deck = [Card]()
+        
+        for suit in suits {
+            for rank in ranks {
+                deck.append(Card(rank: rank, suit: suit))
+            }
+        }
+        
+        return deck
+    }
+}
+
+let threeOfSpades = Card(rank: .three, suit: .spades)
+let threeOfSpadesDescription = threeOfSpades.simpleDescription()
