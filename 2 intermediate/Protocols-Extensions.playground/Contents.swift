@@ -58,3 +58,10 @@ extension Double {
 }
 
 print((-4.0).absoluteValue)
+
+let protocolValue: ExampleProtocol = a
+print(protocolValue.simpleDescription)
+
+// methods outside the protocol definition aren’t available
+// this means that you can’t accidentally access methods or properties that the class implements in addition to its protocol conformance
+// print(protocolValue.anotherProperty)
