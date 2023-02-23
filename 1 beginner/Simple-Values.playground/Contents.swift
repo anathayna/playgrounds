@@ -73,3 +73,18 @@ let floatingPointNumber64bit: Double // precision 15 decimal digits
 let meaningOfLife = 42 // inferred to be of type Int
 let pi = 3.14159 // inferred to be of type Double
 let anotherPi = 3 + 0.14159 // inferred to be of type Double, because swift always chooses Double (rather than Float) when inferring the type of floating-point numbers
+
+// numeric literals
+
+let decimalInteger = 17
+let binaryInteger = 0b10001 // 17 in binary notation
+let octalInteger = 0o21 // 17 in octal notation
+let hexadecimalInteger = 0x11 // 17 in hexadecimal notation
+
+let decimalDouble = 12.1875
+let exponentDouble = 1.25e2 // means 1.25 x 10², or 125.0.
+let hexadecimalDouble = 0xC.3p0
+
+let paddedDouble = 000123.456
+let oneMillion = 1_000_000
+let justOverOneMillion = 1_000_000.000_000_1
