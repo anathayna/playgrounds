@@ -63,3 +63,13 @@ occupations = [:]
 let minValue = UInt8.min  // minValue is equal to 0, and is of type UInt8
 let maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8
 
+// floating-point numbers
+
+let floatingPointNumber32bit: Float // precision 6 decimal digits
+let floatingPointNumber64bit: Double // precision 15 decimal digits
+
+// type safety and type inference
+
+let meaningOfLife = 42 // inferred to be of type Int
+let pi = 3.14159 // inferred to be of type Double
+let anotherPi = 3 + 0.14159 // inferred to be of type Double, because swift always chooses Double (rather than Float) when inferring the type of floating-point numbers
