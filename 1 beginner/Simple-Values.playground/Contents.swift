@@ -86,5 +86,20 @@ let exponentDouble = 1.25e2 // means 1.25 x 10², or 125.0.
 let hexadecimalDouble = 0xC.3p0
 
 let paddedDouble = 000123.456
-let oneMillion = 1_000_000
+let oneMillion = 1_000_000 // extra formatting
 let justOverOneMillion = 1_000_000.000_000_1
+
+// numeric type conversion
+
+// let cannotBeNegative: UInt8 = -1 // UInt8 can't store negative numbers
+// let tooBig: Int8 = Int8.max + 1 // Int8 can't store a number larger than its maximum value
+
+let twoThousand: UInt16 = 2_000
+let one: UInt8 = 1
+let twoThousandAndOne = twoThousand + UInt16(one) // integer conversion
+
+let three = 3
+let pointOneFourOneFiveNine = 0.14159
+let otherPi = Double(three) + pointOneFourOneFiveNine // is inferred to be of type Double
+
+let integerPi = Int(pi) // integer and floating-point conversion
