@@ -103,3 +103,9 @@ let pointOneFourOneFiveNine = 0.14159
 let otherPi = Double(three) + pointOneFourOneFiveNine // is inferred to be of type Double
 
 let integerPi = Int(pi) // integer and floating-point conversion
+
+// type aliases
+
+typealias AudioSample = UInt16
+
+var maxAmplitudeFound = AudioSample.min
