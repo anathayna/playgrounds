@@ -5,6 +5,19 @@ import Foundation
 let maximumNumberOfLoginAttempts = 10
 var currentLoginAttempt = 0
 
+let secondsInAnHour = 3600
+print(secondsInAnHour)
+
+var a = 5
+var b = 8
+
+var c = a
+a = b
+b = c
+
+print("a: \(a)")
+print("b: \(b)")
+
 // declare multiple
 
 var x = 0.0, y = 0.0, z = 0.0
