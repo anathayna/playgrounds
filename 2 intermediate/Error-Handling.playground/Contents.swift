@@ -8,6 +8,10 @@ enum PrinterError: Error {
     case onFire
 }
 
+func canThrowAnError() throws {
+    // this function may or may not throw an error
+}
+
 // throw
 
 func send(job: Int, toPrinter printerName: String) throws -> String {
@@ -22,10 +26,30 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
 // do-catch
 
 do {
+    try canThrowAnError()
+    // no error was thrown
+} catch {
+    // an error was thrown
+}
+
+do {
     let printerResponse = try send(job: 1040, toPrinter: "Bi Sheng")
     print(printerResponse)
 } catch {
     print(error)
+}
+
+func makeASandwich() throws {
+    // ...
+}
+
+do {
+    try makeASandwich()
+    eatASandwich()
+} catch SandwichError.outOfCleanDishes {
+    washDishes()
+} catch SandwichError.missingIngredients(let ingredients) {
+    buyGroceries(ingredients)
 }
 
 // multiple catch blocks
