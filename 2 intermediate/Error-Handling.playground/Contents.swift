@@ -88,7 +88,7 @@ func fridgeContains(_ food: String) -> Bool {
 fridgeContains("banana")
 print(fridgeIsOpen)
 
-// assertions and preconditions
+// assertions
 
 let age = -3
 assert(age >= 0, "A person's age can't be less than zero.")
@@ -100,3 +100,9 @@ if age > 10 {
 } else {
     assertionFailure("A person's age can't be less than zero.")
 }
+
+// preconditions
+
+let index = 1
+precondition(index > 0, "Index must be greater than zero.")
+preconditionFailure("A Index can't be less than zero.")
