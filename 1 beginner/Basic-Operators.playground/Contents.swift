@@ -62,7 +62,107 @@ if name == "world" {
     print("I'm sorry \(name), but I don't recognize you")
 }
 
+// ("blue", false) < ("purple", true)  // can't compare boolean values
+("blue", -1) < ("purple", 1)  // left-to-right comparison
 (1, "zebra") < (2, "apple")   // 1 is less than 2; "zebra" and "apple" aren't compared
 (3, "apple") < (3, "bird")    // 3 is equal to 3, and "apple" is less than "bird"
 (4, "dog") == (4, "dog")      // 4 is equal to 4, and "dog" is equal to "dog"
 
+// ternary conditional operator
+
+let contentHeightTernary = 40
+let hasHeaderTernary = true
+let rowHeightTernary = contentHeightTernary + (hasHeaderTernary ? 50 : 20)
+
+/*
+ question ? answer1 : answer2
+ 
+ if question {
+     answer1
+ } else {
+     answer2
+ }
+ */
+
+let contentHeight = 40
+let hasHeader = true
+let rowHeight: Int
+if hasHeader {
+    rowHeight = contentHeight + 50
+} else {
+    rowHeight = contentHeight + 20
+}
+
+// nil-coalescing operator
+
+let defaultColorName = "red"
+var userDefinedColorName: String?
+
+var colorNameToUse = userDefinedColorName ?? defaultColorName // shorthand -> a != nil ? a! : b
+
+userDefinedColorName = "green"
+colorNameToUse = userDefinedColorName ?? defaultColorName
+
+// range operators
+
+for index in 1...5 { // closed range operator
+    print("\(index) times 5 is \(index * 5)")
+}
+
+let names = ["Anna", "Alex", "Brian", "Jack"]
+let count = names.count
+for i in 0..<count { // half-open range operator
+    print("Person \(i + 1) is called \(names[i])")
+}
+
+for name in names[2...] { // one-sided ranges - closed
+    print(name)
+}
+
+for name in names[...2] {
+    print(name)
+}
+
+for name in names[..<2] { // one-sided ranges - half-open
+    print(name)
+}
+
+let range = ...5 // iterate a one-sided range that omits its final value
+range.contains(7)
+range.contains(4)
+range.contains(-1)
+
+// logical operators
+
+let allowedEntry = false
+if !allowedEntry { // logical not operator
+    print("ACCESS DENIED")
+}
+
+let enteredDoorCode = true
+let passedRetinaScan = false
+if enteredDoorCode && passedRetinaScan { // logical and operator
+    print("Welcome!")
+} else {
+    print("ACCESS DENIED")
+}
+
+let hasDoorKey = false
+let knowsOverridePassword = true
+if hasDoorKey || knowsOverridePassword { // logical or operator
+    print("Welcome!")
+} else {
+    print("ACCESS DENIED")
+}
+
+if enteredDoorCode && passedRetinaScan || hasDoorKey || knowsOverridePassword { // combining logical operators
+    print("Welcome!")
+} else {
+    print("ACCESS DENIED")
+}
+
+if (enteredDoorCode && passedRetinaScan) || hasDoorKey || knowsOverridePassword { // explicit parentheses
+    print("Welcome!")
+} else {
+    print("ACCESS DENIED")
+}
